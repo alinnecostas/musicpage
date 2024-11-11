@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Música</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(40, 14, 65);
+            color: white;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(248, 100, 15);
+            margin-top: 80px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .menu {
+            padding: 10px 0;
+            text-align: center;
+            background-color: rgb(100, 64, 135);
+        }
+
+        .menu a {
+            color: rgb(255, 206, 171);
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .menu a:hover {
+            background-color: rgb(241, 200, 173);
+            color: rgb(87, 0, 138);
+            border-radius: 20px;
+            box-shadow: 0 1px 2px rgb(212, 92, 0);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .music-list {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .music-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: black;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px black;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border: none;
+            cursor: pointer;
+            color: rgb(255, 233, 210);
+            background-color: rgb(228, 95, 0);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgb(108, 2, 207);
+            color: white;
+        }
+
+        /* Galeria de Imagens */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 60px;
+        }
+
+        .gallery-item {
+            border: 2px solid #444;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            width: 200px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .gallery-item .desc {
+            padding: 10px;
+            text-align: center;
+            background-color: #222;
+        }
+
+        /* Imagens com Filtros */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .filters img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .sepia {
+            filter: sepia(100%);
+        }
+
+        .brightness {
+            filter: brightness(1.5);
+        }
+
+        .contrast {
+            filter: contrast(150%);
+        }
+        
+        .about {
+            text-align: justify;
+            max-width: 700px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="menu">
+        <a href="#musicas">Músicas Favoritas</a>
+        <a href="#galeria">Principais Albúns</a>
+        <a href="#filtros">Fotos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <h1> Bem vindo ao <br> Mundo da Música 🎸</h1>
+
+    <div class="container">
+
+        <section id="musicas" class="music-list">
+            <h2>Playlist das Músicas</h2>
+            <div class="music-item">
+                <span>Como se fosse<br> ontem</span>
+                <button class="btn" onclick="window.location.href='escutar01.html'">Ouça Aqui!</button>
+            </div>
+
+            <div class="music-item">
+                <span>Farol</span>
+                <button class="btn" onclick="window.location.href='escutar02.html'">Ouça Aqui!</button>
+            </div>
+
+            <div class="music-item">
+                <span>Sua falta</span>
+                <button class="btn" onclick="window.location.href='escutar03.html'">Ouça Aqui!</button>
+            </div>
+
+            <div class="music-item">
+                <span>Tudo me lembra <br> você</span>
+                <button class="btn" onclick="window.location.href='escutar04.html'">Ouça Aqui!</button>
+            </div>
+        </section>
+
+        <section id="galeria">
+
+            <h2>Principais Albúns</h2>
+            <div class="gallery-container">
+
+                <div class="gallery-item">
+                    <img src="Imagens/capa - bolha.png" alt="capa1">
+                    <div class="desc">Vitor Kley - A Bolha</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Imagens/capa - microfonand.jpg" alt="capa2">
+                    <div class="desc">Vitor Kley - Microfonando</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Imagens/capa - adrenalizou.jpg" alt="capa3">
+                    <div class="desc">Vitor Kley - A Bolha</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="filtros">
+            <h2>Fotos</h2>
+            <div class="filters">
+                <img src="Imagens/foto 3.jpg" alt="foto3">
+                <img src="Imagens/foto 2.jpg" alt="foto2" class="grayscale">
+                <img src="Imagens/foto 1.jpg" alt="foto1" class="sepia">
+                <img src="Imagens/foto 5.jpg" alt="foto5" class="contrast">
+                <img src="Imagens/foto 4.jpg" alt="foto4" class="brightness">
+            </div>
+        </section>
+
+        <section id="sobre" class="about">
+            <h2> Sobre a Banda</h2>
+            <p>
+                Vitor Barbiero Kley, nascido em 18 de agosto de 1994 em Porto Alegre, é um cantor, compositor e músico
+                brasileiro. Ele começou sua carreira musical em 2009, lançando seu primeiro álbum, Eclipse Solar. Em
+                2012, lançou Luz a Brilhar, produzido pelo cantor Armandinho, que se tornou seu padrinho musical. <br>
+
+                Kley ganhou notoriedade nacional com a canção “O Sol”, lançada em 2017, que se tornou um grande sucesso
+                e lhe rendeu certificações de disco de diamante duplo no Brasil e disco de platina em Portugal1. Seu
+                terceiro álbum de estúdio, Adrenalizou, lançado em 2018, também foi bem recebido e certificado com disco
+                de platina no Brasil. <br>
+
+                Além de “O Sol”, outros sucessos de Vitor Kley incluem “Morena”, em parceria com o DJ Bruno Martini, e
+                “A Tal Canção pra Lua”, com Samuel Rosa2. Em 2020, ele lançou o álbum A Bolha, que marcou uma nova fase
+                em sua carreira e foi indicado ao Grammy Latino. <br>
+
+                Vitor Kley é conhecido por suas músicas que misturam pop e pop rock, e por suas apresentações
+                energéticas e carismáticas. Ele continua a ser uma figura influente na música brasileira contemporânea.
+            </p>
+        </section>
+    </div>
+</body>
+
+<!-- Rodapé -->
+<footer style="background-color: #282840; color: #f4f4f4; padding: 15px; text-align: center; margin-top: 30px;">
+    <p>&copy; 2024 Mundo da Música. Todos os direitos reservados.</p>
+</footer>
+
+</div>
+</body>
+
+</html>

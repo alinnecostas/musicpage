@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login e Cadastro</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(40, 14, 65);
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+ 
+h2 {
+    color: #fff9f3;
+}
+ 
+.form-container {
+    background-color: #cf7301;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+}
+ 
+input[type="text"], input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+ 
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #360c47;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+ 
+.btn:hover {
+    background-color: #ff9b84;
+}
+ 
+.back-home {
+    display: block;
+    margin-bottom: 20px;
+    color: #dca8ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+.back-home:hover {
+    text-decoration: underline;
+}
+ 
+a {
+    color: #f9d49d;
+    text-decoration: none;
+}
+ 
+a:hover {
+    text-decoration: underline;
+}
+ 
+/* Ajustes para telas pequenas */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+        max-width: 300px;
+    }
+ 
+    input[type="text"], input[type="password"] {
+        padding: 8px;
+    }
+ 
+    .btn {
+        padding: 8px;
+    }
+}
+</style>
+</head>
+<body>
+ 
+ 
+ 
+<div class="form-container">
+    <h2>Login</h2>
+    <form action="#">
+        <input type="text" placeholder="Usuário" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit" class="btn">Entrar</button>
+    </form>
+    <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+</div>
+<br>
+ 
+<!-- Botão de Voltar para Home -->
+<a href="index.html" class="back-home">Voltar para Home</a>
+</body>
+</html>
